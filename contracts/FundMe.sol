@@ -11,7 +11,9 @@ pragma solidity ^0.8.18;
 
 contract FundMe {
 
-    // Success Message event
+    // uint256 public myValue = 1;
+
+    // Success Message event - Message in the raw logs
     event Funded(address indexed sender, uint256 amount, string message);
 
     // Function that actuall used for funding the contract which will be deployed
@@ -19,7 +21,8 @@ contract FundMe {
 
         // Allow users to send $ 
 
-        // Have a minimum $ set - Here its 100Wei
+        // Have a minimum $ set - Here its 100Wei- Require make the amount mandatory
+        // myValue = myValue + 2;
         require (msg.value >= 100, "Not Enough"); // 1ETH = 1e18 
 
         // Success Message event

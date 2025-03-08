@@ -7,4 +7,7 @@
     - This makes the contract behave like a wallet 
     - `msg.value` - Will add th ability 
      - https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties - Location of the Block and Transaction Properties
-    
+
+4. Regarding Reverts 
+    - The gas WILL be used since the execution occurred in the EVM
+    - Also any state variable changes are also not executed since the tx didnt go through    
