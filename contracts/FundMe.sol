@@ -4,6 +4,8 @@
 
 pragma solidity ^0.8.18;
 
+import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
+
 contract FundMe {
 
     uint256 minimumUsd = 1.0;
@@ -15,6 +17,13 @@ contract FundMe {
     // 1. How to send eth to this contract 
 
     require(msg.value > 100, "Minimum 100 Banans"); // 1e18 = 1 ETH = 1,000,000,000,000,000,000
-    
     }
+
+    function getPrice() public {
+        // Contract address - 0x694AA1769357215DE4FAC081bf1f309aDC325306
+        // ABI - 
+    }
+
+
+
 }

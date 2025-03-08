@@ -11,3 +11,7 @@
 4. Regarding Reverts 
     - The gas WILL be used since the execution occurred in the EVM
     - Also any state variable changes are also not executed since the tx didnt go through    
+
+5. Getting the interface for AggregateV3 
+    - https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol
+        - These are just the names of the functions with no logic 
