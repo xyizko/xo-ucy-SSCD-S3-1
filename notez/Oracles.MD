@@ -12,3 +12,5 @@
     - Tested by deploying and it works as intended
     - Deployed contract - https://sepolia.etherscan.io/address/0x2Fb1DF8C3FF60B2654C7ED2DBb89e2C520183330
         - Note now you have find a way to interact with this contract to get the price
+    - VRF - Verifiable Randomness Function
+    - Note Chainlink Keep is now known as Chainlink Automation
