@@ -11,6 +11,7 @@ contract FundMe {
     uint256 public minimumUsd = 5e18;
 
     address[] public funders;
+    mapping(address => uint256 amountFunded) public addressToAmountFunded;
 
     function fund() public payable{
     
@@ -22,6 +23,9 @@ contract FundMe {
 
     // The address array has been made above - With the code below the senders address will be populated in the array
     funders.push(msg.sender);
+
+    // Adding Amount funded to the array 
+    addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
 
 
     }
