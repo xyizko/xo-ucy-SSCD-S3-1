@@ -12,3 +12,12 @@
 [`ZKSepolia`](https://sepolia.explorer.zksync.io/address/0x692c2826b0518fEf229B4Bca184adE9915D05a73)
 - Note this Sepolia is different from `Sepolia` 
 - You also need to use [ZkSyncBridge](https://portal.zksync.io/bridge/) - To get zkseplia eth
+
+
+# Diraz 
+
+Dirs | What ? 
+:--: | :--: 
+[`contracts`](./contracts) | Actual work will be inside this, the name of the directory is important to prevent unknown errors during deployment 
+[`notez`](./notez) | Each file in the contracts will have an associated markdown file for general notes
+[`otherz`](./others) | Random stuff for learning about solidity
