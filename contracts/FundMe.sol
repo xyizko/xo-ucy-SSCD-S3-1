@@ -30,6 +30,9 @@ contract FundMe {
 
     }
 
+    // Function to get the the current ETH/USD price via Chainlink Smart Data Feeds
+    // Note the Contract that fetches the price across several sources 
+    // 0x694AA1769357215DE4FAC081bf1f309aDC325306 - ETH/USD Sepolia 
     function getPrice() public view returns(uint256) {
         // Contract address - 0x694AA1769357215DE4FAC081bf1f309aDC325306
         // ABI - 
@@ -43,6 +46,7 @@ contract FundMe {
 
     }
 
+    // Function that converts ETH to USD and returns the eth amount - Math is required to preserve precision
     function getConversionRate(uint256 ethAmount) public view returns(uint256) {
         //1 ETH ?
         // 2000_00000000000000
@@ -55,6 +59,8 @@ contract FundMe {
 
     }
 
+
+    // Calling the native version() of the AggregateV3Inerface toget its version
     function getVersion() public view returns (uint256) {
         address priceFeedAddress = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
         return AggregatorV3Interface(priceFeedAddress).version();
