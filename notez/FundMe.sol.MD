@@ -21,3 +21,16 @@
 7 From - Section3-v20 
     - Three method of sending crypto to the sender
     - These being convered when learning about fundme loops, trying to send the funds back to sender
+
+8. Reagarding call being the preferred way to sending or reciving tokens 
+
+```solidity 
+// call - Method for sending funds back to sender - Lower Command
+        (bool callSucces,)=payable(msg.sender).call{value: address(this).balance}("");
+        require (callSucces, "Call failed");
+```
+- This method is returns two objects 
+    - a boolean object - 
+    - a bytes object 
+
+    

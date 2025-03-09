@@ -45,9 +45,17 @@ contract FundMe {
         // Reset array - make a new array 
         funders = new address[](0);
 
-        // transfer - Method for sending funds back to sender
-        // send - Method for sending funds back to sender
-        // call - Method for sending funds back to sender
+        // transfer - Method for sending funds back to sender - Autorevert doesnt need to take into account fail case
+        payable(msg.sender).transfer(address(this).balance);
+        
+        // send - Method for sending funds back to sender - Need to add a fail condition also here
+        bool sendSuccess = payable(msg.sender).send(address(this).balance);
+        require(sendSuccess, "Failed to send back ETH");
+
+        // call - Method for sending funds back to sender - Lower Command
+        (bool callSucces,)=payable(msg.sender).call{value: address(this).balance}("");
+        require (callSucces, "Call failed");
+
 
 
 
