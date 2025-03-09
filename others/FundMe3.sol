@@ -1,3 +1,6 @@
+// using the Fundme.Sol original code to create libraries 
+
+
 // Check the FundMe.Sol inside others/ for tests
 
 //SPDX-License-Identifier: Bananana 
@@ -53,11 +56,6 @@ contract FundMe {
         uint256 ethAmountInUsd = (ethPrice * ethAmount)/1e18;
         return ethAmountInUsd;
 
-    }
-
-    function getVersion() public view returns (uint256) {
-        address priceFeedAddress = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
-        return AggregatorV3Interface(priceFeedAddress).version();
     }
 
 
