@@ -17,3 +17,7 @@
         - These are just the names of the functions with no logic 
 
 6. Regarding math - Always Multiply before Divide - Whole Numbers only being used 
+
+7 From - Section3-v20 
+    - Three method of sending crypto to the sender
+    - These being convered when learning about fundme loops, trying to send the funds back to sender

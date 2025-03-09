@@ -18,6 +18,7 @@ contract SafeMathTester {
         bigNumber = bigNumber + 1; 
     }
 
+    // Unchecked add testing - by default now uint is checked
     function uncheckedAdd() public {
         unchecked{
             bigNumber = bigNumber + 1;

@@ -26,8 +26,33 @@ contract FundMe {
         funders.push(msg.sender);
 
         // Adding Amount funded to the array 
-        addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
+        addressToAmountFunded[msg.sender] += msg.value;
+    }
+
+    // Withdraw all the funds reset mapping to 0 
+
+    function withdraw() public {
+        // for loop 
+        // [1,2,3,4] indeses
+        // 0,1,2,3, indesex 
+
+        // Resetting the array , when withdraw function is called then the for loop will reset 
+        for (uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder] = 0;
+        }
+
+        // Reset array - make a new array 
+        funders = new address[](0);
+
+        // transfer - Method for sending funds back to sender
+        // send - Method for sending funds back to sender
+        // call - Method for sending funds back to sender
+
+
+
 
 
     }
+
 }
