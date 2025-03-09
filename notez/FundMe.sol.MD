@@ -33,4 +33,7 @@
     - a boolean object - 
     - a bytes object 
 
-    
+9. Constructors - Immediately called when the contract executes
+    - Executed Once 
+    - Used for settingup state variables 
+    - Or in the currect code example to set who can call the `withdraw` function 
