@@ -41,6 +41,7 @@ contract FundMe {
     ////////////////////////////////
 
 
+    // Note this is called as a default in the fallback() an receive()
     function fund() public payable{
         msg.value.getConversionRate();
 
@@ -93,9 +94,17 @@ contract FundMe {
         _; // Then execute the function
     }
 
-    // Sending eth without fund function 
+    // Receive function
 
-    //receive and fallback 
+    receive() external payable {
+        fund();
+    }
+
+    // fallback function 
+
+    fallback() external payable {
+        fund();
+    }
 
 
 }

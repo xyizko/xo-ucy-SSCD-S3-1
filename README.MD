@@ -28,3 +28,6 @@ Dirs | What ?
 [Solidity Lang](https://soliditylang.org/) - Note these are the reference docs, refer all the code being written against this
 
 
+# Triaging 
+
+1. 15min to 20min blocks 
