@@ -16,12 +16,16 @@ contract FundMe {
     // Attach functions in PriceConverter.sol into the uin256 variable
     using PriceConverter for uint256;
 
-    uint256 public minimumUsd = 1e18;
+    uint256 public constant MINIMUM_USD = 1e18;
 
     address[] public funders;
     mapping(address => uint256 amountFunded) public addressToAmountFunded;
 
-    address public owner;
+    address public  owner;
+
+    // Ex cost with immutable - 687796
+    // Ex cost w/o immutable = 710484
+    // Setting it as immutable does save gas cost
 
     // This ensures that deployer of the contract is only availbale to call the functions in t
     // Contract logic section 
@@ -37,7 +41,7 @@ contract FundMe {
     function fund() public payable{
         msg.value.getConversionRate();
 
-        require(msg.value.getConversionRate() > minimumUsd, "You need to fund more than 50 ETH");
+        require(msg.value.getConversionRate() > MINIMUM_USD, "You need to fund more than 50 ETH");
 
         // The address array has been made above - With the code below the senders address will be populated in the array
         funders.push(msg.sender);

@@ -54,3 +54,4 @@
 11. Section 3 - VID 24 
     1. Regarding gas optimizations 
     2. Regarding usag of Constant and Immutable KW - 
+    3. Using immutable and constant has an impact on gas costs
