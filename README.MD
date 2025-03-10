@@ -21,3 +21,10 @@ Dirs | What ?
 [`contracts`](./contracts) | Actual work will be inside this, the name of the directory is important to prevent unknown errors during deployment 
 [`notez`](./notez) | Each file in the contracts will have an associated markdown file for general notes
 [`otherz`](./others) | Random stuff for learning about solidity
+
+
+# Official Docs 
+
+[Solidity Lang](https://soliditylang.org/) - Note these are the reference docs, refer all the code being written against this
+
+

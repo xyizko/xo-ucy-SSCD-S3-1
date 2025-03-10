@@ -50,3 +50,7 @@
 
 ```
 - note the `_;` represent the rest of the function. If this is above `require` , that would mean to first execute the function and THEN the modifier directive. So this is a mistake and defeats the need for the modifier. So the ordering is important , always first the required functionality and then `_;`
+
+11. Section 3 - VID 24 
+    1. Regarding gas optimizations 
+    2. Regarding usag of Constant and Immutable KW - 
