@@ -7,9 +7,6 @@ pragma solidity ^0.8.18;
 import {PriceConverter} from "./PriceConverter.sol";
 
 
-// Adding Custom error which needs to be used with a revert 
-error NotOwner();
-
 contract FundMe {
 
     ////////////////////////////////
@@ -88,14 +85,8 @@ contract FundMe {
     // Creating a modifier 
 
     modifier onlyOwner() {
-        // require(msg.sender == owner, "U NO OWNER FCKFCK!"); // First execute this
-        if (msg.sender != owner) {revert NotOwner();}
+        require(msg.sender == owner, "U NO OWNER FCKFCK!"); // First execute this
         _; // Then execute the function
     }
-
-    // Sending eth without fund function 
-
-    //receive and fallback 
-
 
 }

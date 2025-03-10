@@ -55,3 +55,9 @@
     1. Regarding gas optimizations 
     2. Regarding usag of Constant and Immutable KW - 
     3. Using immutable and constant has an impact on gas costs
+
+12. Section 3 - Vid 25 
+    1. Custom errors are another method of saving on gas costs 
+
+13. S3V26
+    1. Fallback function - When a contract receives ether and has no receive function
