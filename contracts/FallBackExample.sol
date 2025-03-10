@@ -22,4 +22,8 @@ contract BandoKando {
     receive() external payable {
         panty = 6969;
     }
+
+    fallback() external payable {
+        panty = 9;
+    }
 }
