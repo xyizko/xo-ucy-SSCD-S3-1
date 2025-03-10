@@ -61,3 +61,32 @@
 
 13. S3V26
     1. Fallback function - When a contract receives ether and has no receive function
+
+14. Regarding which function will be triggerred if msg.data is empty 
+
+Firstly these are the different values and msg. functions 
+
+Breakdown of msg.* Variables
+Variable	Description
+msg.sender	The address that sent the transaction (caller).
+msg.value	The amount of Ether (in wei) sent with the transaction.
+msg.data	The raw data (bytes) sent with the transaction (used in fallback()).
+msg.sig	The first 4 bytes of msg.data (function identifier).
+msg.gas (deprecated)	Gas available for the transaction (only for older versions).
+
+- So the above is talking about the various values the msg.something can have 
+
+```sh 
+// Explainer from: https://solidity-by-example.org/fallback/
+    // Ether is sent to contract
+    //      is msg.data empty?
+    //          /   \
+    //         yes  no
+    //         /     \
+    //    receive()?  fallback()
+    //     /   \
+    //   yes   no
+    //  /        \
+    //receive()  fallback()
+
+```
