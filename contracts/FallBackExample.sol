@@ -15,3 +15,11 @@ contract FallbackExample {
     
 
 }
+
+contract BandoKando {
+    uint256 public panty ;
+
+    receive() external payable {
+        panty = 6969;
+    }
+}
