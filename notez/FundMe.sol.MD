@@ -37,3 +37,16 @@
     - Executed Once 
     - Used for settingup state variables 
     - Or in the currect code example to set who can call the `withdraw` function 
+
+10. Regarding modifier 
+
+```solidity 
+// Creating a modifier 
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "U NO OWNER FCKFCK!"); // First execute this
+        _; // Then execute the function
+    }
+
+```
+- note the `_;` represent the rest of the function. If this is above `require` , that would mean to first execute the function and THEN the modifier directive. So this is a mistake and defeats the need for the modifier. So the ordering is important , always first the required functionality and then `_;`

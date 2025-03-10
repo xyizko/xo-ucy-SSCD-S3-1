@@ -47,10 +47,7 @@ contract FundMe {
     }
 
     // Withdraw all the funds reset mapping to 0 
-
-
-
-    function withdraw() public {
+    function withdraw() public onlyOwner {
 
         // Setting the caller of this function only to deployer (owner)
         require (msg.sender == owner, "Only Owner Bastard !");
@@ -79,6 +76,13 @@ contract FundMe {
         (bool callSucces,)=payable(msg.sender).call{value: address(this).balance}("");
         require (callSucces, "Call failed");
 
+    }
+
+    // Creating a modifier 
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "U NO OWNER FCKFCK!"); // First execute this
+        _; // Then execute the function
     }
 
 }
