@@ -21,6 +21,7 @@ Dirs | What ?
 [`contracts`](./contracts) | Actual work will be inside this, the name of the directory is important to prevent unknown errors during deployment 
 [`notez`](./notez) | Each file in the contracts will have an associated markdown file for general notes
 [`otherz`](./others) | Random stuff for learning about solidity
+[`chalcon`](./chalcon) | Contracts written for solving the nft challengens
 
 
 # Official Docs 
