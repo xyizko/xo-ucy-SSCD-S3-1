@@ -1,0 +1,2 @@
+1. Tedt notes
+1. Pushing his after adding the repo as a clone , authenticating and then pushing back to same repo 
