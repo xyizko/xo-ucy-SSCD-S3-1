@@ -1,6 +1,4 @@
-// Contract to get the spolia price from chainlink contact 
-
-// SPDX-License-Identifer: Boobz
+// SPDX-License-Identifier: B000baz
 
 pragma solidity ^0.8.18; 
 
